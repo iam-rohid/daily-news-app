@@ -1,0 +1,17 @@
+{
+  "name": "bangla-news-app",
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
+  "workspaces": [
+    "api",
+    "web"
+  ],
+  "scripts": {
+    "clean": "rimraf ./*/node_modules"
+  },
+  "devDependencies": {
+    "prettier": "^2.6.2",
+    "rimraf": "^3.0.2"
+  }
+}
