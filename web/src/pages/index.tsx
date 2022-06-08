@@ -8,7 +8,7 @@ type Props = { data: PublisherFeed };
 
 const HomePage: NextPage<Props> = ({ data }) => {
   return (
-    <Container maxW="container.xl">
+    <Container maxW="1680px">
       {data.newsFeed.map((collection, index) => (
         <Box as="section" my={16} key={index}>
           <Text fontSize={32} fontWeight="semibold">
@@ -23,26 +23,26 @@ const HomePage: NextPage<Props> = ({ data }) => {
               'repeat(2, 1fr)',
               'repeat(3, 1fr)',
               'repeat(4, 1fr)',
+              'repeat(5, 1fr)',
             ]}
             alignItems="stretch"
           >
             {collection.items?.map((item, index) => {
-              const isBig = false;
               return (
-                <GridItem key={index} colSpan={[1, 1, isBig ? 2 : 1]}>
+                <GridItem key={index}>
                   <Box
                     as="a"
                     target="_blank"
                     href={item.originalUrl}
                     h="full"
-                    bgColor="white"
+                    bgColor="gray.50"
                     borderRadius={12}
-                    boxShadow="0 0 0 1px rgba(0,0,0,0.05)"
+                    boxShadow="0 0 0 1px rgba(0,0,0,0.1), 0 4px 6px rgba(0,0,0,0.05)"
                     display="flex"
                     flexDirection="column"
                     _hover={{
                       boxShadow:
-                        '0 0 0 1px rgba(0,0,0,0.1), 0 4px 12px rgba(0,0,0,0.1)',
+                        '0 0 0 1px rgba(0,0,0,0.2), 0 4px 16px rgba(0,0,0,0.1)',
                     }}
                   >
                     <Box padding={4} flex={1}>
@@ -58,7 +58,7 @@ const HomePage: NextPage<Props> = ({ data }) => {
                         position: 'relative',
                         overflow: 'hidden',
                         borderRadius: 12,
-                        aspectRatio: '16/9',
+                        aspectRatio: '3/2',
                         bgColor: 'gray.100',
                       }}
                       mx={2}
