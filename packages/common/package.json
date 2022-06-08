@@ -1,0 +1,7 @@
+{
+  "name": "@news-app/common",
+  "version": "0.0.1",
+  "main": "lib/index.ts",
+  "types": "lib/index.ts",
+  "license": "MIT"
+}
